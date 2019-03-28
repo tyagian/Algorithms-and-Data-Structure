@@ -1,0 +1,1 @@
+# J - jewels, S - stones
