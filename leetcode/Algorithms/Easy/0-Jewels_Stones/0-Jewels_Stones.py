@@ -14,21 +14,18 @@ Example 2:
 Input: J = "z", S = "ZZ"
 Output: 0
 """
+# case 1:
+print "case 1:"
 j = "aA"
 s = "aAAbbbb"
-
-S_list = s.split()
-J_list = j.split()
 count = 0 
-print S_list
-print J_list
-
-for stones in S_list:
-    for jeweles in J_list:
-        if stones == jeweles:
-            count = count + 1
+for stone in s:
+    if stone in j:
+        count = count + 1
 print count
 
+#case 2:
+print "\ncase 2:"
 def countJewels(s, j):
     return sum(x in j for x in s)
  

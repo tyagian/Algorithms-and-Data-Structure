@@ -13,7 +13,6 @@ func js(stones, jewels string) (n int) {
 	}
 	return
 }
-
 func main() {
 	fmt.Println(js("aAAbbbb", "aA"))
 }
