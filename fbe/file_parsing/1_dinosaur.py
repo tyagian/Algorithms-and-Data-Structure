@@ -28,12 +28,10 @@ with open("dataset_2.csv") as file2:
 with open("dataset_1.csv") as file1:
     table1 = csv.DictReader(file1)
     for rows1 in table1:
-        for key in table3:
-            if str(key) == rows1['NAME']:
-                LEG_LENGTH = rows1['NAME']
-                STRIDE_LENGTH = table3[key]
-                speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)
-                table4[key] = float(speed)
+       if rows1['NAME'] in table3:
+           STRIDE_LENGTH = table3[key]
+           speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)
+           table4[key] = float(speed)
 print ("\tNAME : \t\t Speed")
 for key, value in sorted(table4.items(), key = lambda kv: kv[1], reverse=True):
     print("%s: %s" %(key, value))
