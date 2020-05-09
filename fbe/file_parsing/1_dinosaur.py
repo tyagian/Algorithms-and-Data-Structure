@@ -26,8 +26,8 @@ with open("dataset_2.csv") as file2:
             STRIDE_LENGTH = row2['STRIDE_LENGTH']
             table3[(rows2['NAME'])] = rows2['STRIDE_LENGTH']
 with open("dataset_1.csv") as file1:
-    table1 = csv.DictReader(file1)
-    for rows1 in table1:
+    table2 = csv.DictReader(file1)
+    for rows1 in table2:
        if rows1['NAME'] in table3:
            STRIDE_LENGTH = table3[rows1['NAME']]
            speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)
