@@ -6,10 +6,8 @@ def printBipedalDinosaursOrderBySpeed(filePathDinoInfo, filePathAddInfo):
     g = 9.8
     with open(filePathAddInfo, 'r') as f:
         line = csv.reader(f)
-        #print (line)
         while line:
             line = f.readline().strip()
-            #print (line)
             if line:
                 NAME, STRIDE_LENGTH, STANCE = line.split(',')
                 if STANCE == "bipedal":
