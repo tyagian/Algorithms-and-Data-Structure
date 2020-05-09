@@ -23,8 +23,8 @@ def printBipedalDinosaursOrderBySpeed(filePathDinoInfo, filePathAddInfo):
                     STRIDE_LENGTH, LEG_LENGTH = bipedalDinosaurs[NAME], float(LEG_LENGTH)
                     bipedalDinosaurs[NAME] = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * math.sqrt(LEG_LENGTH * g)
     
-    #print ([key for key, value in sorted(bipedalDinosaurs.items(), key = lambda kv: kv[1], reverse=True) ])
-    for key, value in sorted(bipedalDinosaurs.items(), key = lambda kv: kv[1], reverse=True):
-        print("%s: %s" %(key, value))
+    print (*[key for key, value in sorted(bipedalDinosaurs.items(), key = lambda kv: kv[1], reverse=True)], sep='\n')
+    #for key, value in sorted(bipedalDinosaurs.items(), key = lambda kv: kv[1], reverse=True):
+    #    print("%s: %s" %(key, value))
 
 printBipedalDinosaursOrderBySpeed('dataset_1.csv', 'dataset_2.csv')
