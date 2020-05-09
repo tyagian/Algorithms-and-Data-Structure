@@ -29,9 +29,9 @@ with open("dataset_1.csv") as file1:
     table1 = csv.DictReader(file1)
     for rows1 in table1:
        if rows1['NAME'] in table3:
-           STRIDE_LENGTH = table3[key]
+           STRIDE_LENGTH = table3[rows1['NAME']]
            speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)
-           table4[key] = float(speed)
+           table4[rows1['NAME']] = float(speed)
 print ("\tNAME : \t\t Speed")
 for key, value in sorted(table4.items(), key = lambda kv: kv[1], reverse=True):
     print("%s: %s" %(key, value))
