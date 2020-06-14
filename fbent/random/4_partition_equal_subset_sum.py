@@ -38,7 +38,10 @@ class Solution:
 # Case:3
 # DP and DFS
 # https://leetcode.com/problems/partition-equal-subset-sum/discuss/276278/Python-DP-and-(DFS%2BMemo)
+# Time: O(len(nums) * sum(nums)) -> O(n) * 
 """
+# Approach: check if sum is even, only then we can split into equal subset
+# If get target = sum/2, we keep checking it by subtracting with each element if we get 0, its True
 class Solution(object):
     def canFindSum(self, nums, target, ind, n, d):
         if target in d: return d[target] 
@@ -51,7 +54,7 @@ class Solution(object):
                         d[target] = True
                         break
         return d[target]
-    
+        
     def canPartition(self, nums):
         s = sum(nums)
         if s % 2 != 0: return False
