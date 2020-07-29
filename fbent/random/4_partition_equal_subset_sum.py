@@ -44,6 +44,7 @@ class Solution:
 # If get target = sum/2, we keep checking it by subtracting with each element if we get 0, its True
 class Solution(object):
     def canFindSum(self, nums, target, ind, n, d):
+        print (d)
         if target in d: return d[target] 
         if target == 0: d[target] = True
         else:
@@ -51,6 +52,7 @@ class Solution(object):
             if target > 0:
                 for i in range(ind, n):
                     if self.canFindSum(nums, target - nums[i], i+1, n, d):
+                        print ("--",nums, target - nums[i], i+1, n, d)
                         d[target] = True
                         break
         return d[target]

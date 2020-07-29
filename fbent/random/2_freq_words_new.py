@@ -14,21 +14,20 @@ print(most_occur) """
 #Approach 2: Heap. Time Complexity, O(N) to build a heap, O(klogN) to find the pop the first kth largest elements and reconstruct the heap.
 import collections
 import heapq
-import string
 #from collections import Counter
 class Solution:
     def topKFrequent(words,k):
-        words = words.split() #.replace(",","").lower()
-        #print (words)
+        word_s = words.split() #.replace(",","").lower()
+        print (word_s)
+        words = [sub.replace(' ', '').replace(".","").replace(",","") for sub in word_s] 
         count = collections.Counter(words)
-        print (type(count))
-        print (count)
+        #print (type(count))
+        #print (count)
         heap = [(-freq, word) for word, freq in count.items()]
-        print (type(heap))
-        print (("\nheap", heap))
+        #print (type(heap))
+        #print (("\nheap", heap))
         heapq.heapify(heap)
-        fre
-        #return [heapq.heappop(heap) for _ in range(k)]
+        return [heapq.heappop(heap) for _ in range(k)]
 words = "Welcome welcome, to the world of Geeks. This portal has been created to provide well written well thought and well explained solutions for selected questions If you like Geeks for Geeks and would like to contribute here is your chance You can write article and mail your article to contribute at geeksforgeeks org See your article appearing on the Geeks for Geeks main page and help thousands of other Geeks."
 #words = ["the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"]
 print (Solution.topKFrequent(words,4))
