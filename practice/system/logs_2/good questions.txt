@@ -1,0 +1,33 @@
+1. Golang interfaces
+2. Structure
+3. Call by value and call by reference
+4. Structure func method
+5. Kubernetes to make sure pod running on each node - DaemonSet
+6. How to Kubernetes cluster for multiple teams - Using context, namespace, roles
+7. Prometheus metric type. Time series, in Yaml.
+
+Prometheus has four primary metric types to query for via PromQL: 
+counters, gauges, histograms, and summaries
+
+8. Prometheus cortex: Built on Prometheus, 
+Cortex is an open source project that adds horizontal scalability
+While Prometheus can scale up to 1 million samples/sec on a single machine, 
+with Cortex horizontal scalability is practically limitless
+9. Prometheus Remote write: 
+https://sysdig.com/blog/prometheus-remote-write-opentelemetry/
+8. How to filter by namespace in promql
+9. cncf projects
+10. Python regex, groups
+https://github.com/johnkchiu/GitLogParser/blob/master/gitLogParser.py
+11. Python multithreading vs multi-processing
+11. Why we store Terraform state file remotely
+12. Ansible playbooks, roles 
+13. Python modules. How to call them in a different file/code
+14. cncf projects
+15. Python2 vs Python3: https://www.pylenin.com/blogs/10-benefits-of-switching-to-python-3/
+16. Jenkins declarative vs scripted
+Declarative pipelines break down stages into individual stages that can contain multiple steps. 
+Scripted pipelines use Groovy code and references to the Jenkins pipeline DSL within the stage 
+elements without the need for steps.
+https://www.edureka.co/community/54705/difference-between-declarative-pipeline-scripted-pipeliine
+
