@@ -5,6 +5,10 @@ To read line by line without loading file in memory
 with open('Iliad.txt') as f:
     for index, line in enumerate(f):
         print("Line {}: {}".format(index, line.strip()))
+
+with open("sample.txt") as a_file:
+    for line in a_file:
+        print(line)
 """
 """
 You can write a from-scratch solution to count the frequency of certain words, without using 
