@@ -1,6 +1,9 @@
-#https://leetcode.com/problems/search-in-rotated-sorted-array/
-# use binary search
-
+"""
+Search in rotated sorted array
+memory: O(log n) since binary search used
+use binary search
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+"""
 class test:
     def find_index(nums, target):
         low, high = 0, len(nums) - 1
@@ -20,7 +23,7 @@ class test:
                     low = mid + 1
                 else: # target is less than middle but greater than leftmost value
                     high = mid - 1
-                    
+
             # right sorted portion
             else:
                 # if mid_number > target:
