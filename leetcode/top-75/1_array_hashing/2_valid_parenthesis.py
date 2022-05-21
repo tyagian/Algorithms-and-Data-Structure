@@ -4,7 +4,7 @@ class test:
     def valid_parenthesis(s):
         brackets_dict = {'(':')' , '[':']' , '{':'}'}
         open_brackets = []
-        
+
         for bracket in s:
             if bracket in brackets_dict:
                 open_brackets.append(bracket)
@@ -15,7 +15,8 @@ class test:
                 else:
                     return False
         return open_brackets == []
-
+# time: O(n)
+# space: O(n)
 def main():
     input_ = "{()[]}"
     output = test.valid_parenthesis(input_)
